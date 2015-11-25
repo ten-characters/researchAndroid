@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="250dp"
+    android:layout_height="325dp"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center_horizontal"
+    style="@style/AppTheme.Activity">
+    <TextView
+        android:id="@+id/issue_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:text="@string/issue_title"
+        android:textSize="@dimen/abc_text_size_headline_material"
+        android:textColor="@color/accent_dark_indigo"
+        android:textStyle="bold"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/issue_header"
+        android:padding="5dp"
+        android:id="@+id/relativeLayout">
+        <TextView
+            android:id="@+id/can_deliver_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/can_deliver_prompt"
+            android:textSize="20sp"
+            android:textColor="@color/accent_dark_indigo"
+             />
+        <Switch
+            android:id="@+id/can_deliver_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/yes"
+            android:textOff="@string/no"
+            android:textColor="@color/accent_dark_indigo"
+            android:checked="false"
+            android:layout_below="@+id/can_deliver_header"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+
+    <!-- ACTION BUTTONS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp">
+        <Button
+            android:id="@+id/issue_submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onButtonClick"
+            android:text="@string/submit"
+            style="@style/AppTheme.Widget.Button"
+            />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+        <Button
+            android:id="@+id/issue_cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onButtonClick"
+            android:text="@string/cancel"
+            style="@style/AppTheme.Widget.Button"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

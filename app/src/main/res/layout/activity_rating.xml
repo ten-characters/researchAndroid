@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.ten_characters.researchAndroid.activities.RatingActivity"
+    style="@style/AppTheme.Activity">
+
+    <TextView
+        android:id="@+id/rating_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/rating_header"
+        style="@style/highHeaderText"/>
+    <LinearLayout
+        android:id="@+id/rating_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rating_header"
+        android:padding="8dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pickup_loc"
+            style="@style/lowHeaderText"/>
+        <RatingBar
+            android:id="@+id/pickup_rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:stepSize=".5"
+            style="@style/circleStarRatingBar" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dropoff_loc"
+            style="@style/lowHeaderText"/>
+        <RatingBar
+            android:id="@+id/dropoff_rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:stepSize=".5"
+            style="@style/circleStarRatingBar" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/rating_submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rating_container"
+        android:onClick="onButtonClick"
+        android:text="@string/submit"
+        style="@style/roundedButton"/>
+
+</RelativeLayout>

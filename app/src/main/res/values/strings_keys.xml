@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="google_maps_key" translatable="false"  templateMergeStrategy="preserve">
+        mapsId
+    </string>
+    <!-- PARSE push keys -->
+    <string name="parse_application_id_production" translatable="false">
+        appIdProd</string>
+    <string name="parse_client_id_production" translatable="false">
+        clientIdProd</string>
+    <string name="parse_application_id_debug" translatable="false">
+        appIdDebug</string>
+    <string name="parse_client_id_debug" translatable="false">
+        clientIdDebug</string>
+    <!-- Scanbot -->
+    <string name="scanbot_license_key" translatable="false" templateMergeStrategy="preserve">
+        scanbotKey
+    </string>
+</resources>

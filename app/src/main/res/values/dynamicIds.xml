@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main Activity -->
+    <item name="action_button" type="id"/>
+    <item name="pickup_button" type="id"/>
+    <item name="dropoff_button" type="id"/>
+
+    <!--  Rating Activity -->
+    <item name="estimated_delay_input" type="id"/>
+</resources>

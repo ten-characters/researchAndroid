@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/intro_frag_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    >
+    <!--  The background should be set dynamically with one of our pics -->
+    <LinearLayout
+        android:id="@+id/intro_text_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/intro_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/introHeaderText"/>
+        <TextView
+            android:id="@+id/intro_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="@style/introBodyText"/>
+    </LinearLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/intro_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/intro_bg_gradient"
+        android:padding="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/intro_text_container"/>
+
+</RelativeLayout>

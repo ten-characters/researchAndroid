@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignActivity">
+
+    <com.example.austin.signature.SignDocumentView
+        android:id="@+id/signview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#ffffff" />
+
+    <ImageButton
+        android:id="@+id/submit_signature_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/signview"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:src="@drawable/check_small"
+        android:background="@color/transparent"
+        />
+
+    <ImageButton
+        android:id="@+id/signature_redo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/redo_small"
+        android:layout_margin="8dp"
+        android:layout_below="@+id/submit_signature_button"
+        android:layout_alignParentRight="true"
+        android:background="@color/transparent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I hereby approve that the freight is in good condition..."
+        android:textSize="16sp"
+        android:layout_alignTop="@+id/submit_signature_button"
+        android:layout_alignLeft="@+id/signview" />
+
+    <LinearLayout
+        android:id="@+id/signature_line_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="16dp">
+        <View
+            android:id="@+id/signature_line"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/signature_line"/>
+        <EditText
+            android:id="@+id/edit_name_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Consignee Name?"/>
+    </LinearLayout>
+
+</RelativeLayout>

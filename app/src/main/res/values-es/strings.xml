@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Ajustes</string>
+    <string name="drawer_close">Cajón está cerrado</string>
+    <string name="drawer_open">Cajón está abierto</string>
+    <string name="title_activity_about">Acerca De</string>
+    <string name="payment">Pago</string>
+    <string name="profile">Perfil</string>
+    <string name="promos">Promociones</string>
+    <string name="help">Ayuda</string>
+    <string name="about">Acerca De</string>
+    <string name="action_sign_in_short">Conexión</string>
+    <string name="action_sign_in">Conexión o inscribirse</string>
+    <string name="legal">Legal</string>
+    <string name="offer_accept">Sí</string>
+    <string name="offer_decline">NO</string>
+    <string name="offer_header">OFERTA</string>
+    <string name="prompt_password">Clave</string>
+    <string name="prompt_username">Usuario</string>
+</resources>

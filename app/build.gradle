@@ -1,0 +1,158 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+apply plugin: 'com.android.application'
+// Crashlytics
+apply plugin: 'io.fabric'
+// Google Analytics
+apply plugin: 'com.google.gms.google-services'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    signingConfigs {
+        debug {
+            keyAlias 'Debug Key'
+            keyPassword 'pork&11eelT'
+            storeFile file('pathtofile')
+            storePassword 'pork&11eelT'
+        }
+        prod {
+            keyAlias 'pallet'
+            keyPassword 'pork&11eelT'
+            storeFile file('pathtofile')
+            storePassword 'pork&11eelT'
+        }
+    }
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+    // Auto - Increment the code and build accordingly!
+    // Will (soon) have to deal with overflow of versions, aka when x99 occurs,
+    //  the next version should be x000
+    def versionFile = file('version.properties')
+    if (versionFile.canRead()) {
+        // Only build if we have a good version file, would be super screwy
+        // if we couldn't read the versioning setup file
+
+        // First load up the properties file
+        def Properties versionProperties = new Properties()
+        versionProperties.load(new FileInputStream(versionFile))
+
+        String versionCodeKey = ''
+
+        buildTypes {
+            // Get the specific version code depending on release type
+            // Todo: beta/alpha/production should be flavors I think. Maybe.
+            release {
+                versionCodeKey = 'PRODUCTION_CODE'
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                signingConfig signingConfigs.prod
+            }
+            beta {
+                versionCodeKey = 'BETA_CODE'
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                signingConfig signingConfigs.prod
+            }
+            alpha {
+                versionCodeKey = 'ALPHA_CODE'
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                signingConfig signingConfigs.prod
+            }
+            debug {
+                versionCodeKey = 'DEBUG_CODE'
+                applicationIdSuffix ".debug"
+                debuggable true
+                ext.enableCrashlytics = false
+                signingConfig signingConfigs.debug
+            }
+        }
+
+        // VERSION CODE SCHEMA
+        /*
+        *   PROD: 1xx
+        *   BETA: 2xx
+        *   ALPHA: 3xx
+        *   DEBUG: 1
+        * */
+        // Todo: This all builds at once :(
+        // Auto increment the code UNLESS this is a debug build
+        // Debug should always just have that one lil constant code
+        def Integer code = versionProperties[versionCodeKey].toInteger() + 1
+        println(code)
+        println(versionCodeKey)
+        // Then re-write it to the properties file
+        if (!versionCodeKey.equals('DEBUG_CODE')) {
+            versionProperties[versionCodeKey] = code.toString()
+            versionProperties.store(versionFile.newWriter(), null)
+        }
+
+        defaultConfig {
+            applicationId "com.ten_characters.researchAndroid"
+            minSdkVersion 16
+            targetSdkVersion 22
+
+            versionCode 103
+            // Let's try the x.y.z format
+            // Major.Minor.Patch
+            versionName "0.4.0"
+
+            multiDexEnabled true
+        }
+
+        productFlavors {
+            full {
+
+            }
+            demo {
+
+            }
+        }
+
+    } else {
+        throw new GradleException("Could not read the version.properties file!")
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.google.android.gms:play-services:7.8.0'
+    // For google analytics
+    compile 'com.google.android.gms:play-services-analytics:7.3.0'
+    // for custom font wrapping
+    compile 'uk.co.chrisjenx:calligraphy:2.1.0'
+    // Yay for support libraries!
+    compile 'com.android.support:cardview-v7:22.0.+'
+    compile 'com.android.support:recyclerview-v7:22.0.+'
+    compile 'com.android.support:design:22.2.0'
+    // a custom linear layout manager that allows wrapping recycler view content!
+    compile 'org.solovyev.android.views:linear-layout-manager:0.5@aar'
+    // simple circle images
+    compile 'de.hdodenhof:circleimageview:1.2.1'
+    // For Parse Push Notifications
+    compile files('libs/Parse-1.9.2.jar')
+    compile files('libs/bolts-android-1.2.0.jar')
+    compile files('libs/ParseCrashReporting-1.9.3.jar')
+    // A better http client # will use for file uploads methinks
+    compile files('libs/android-async-http-1.4.6.jar')
+    compile 'me.relex:circleindicator:1.1.5@aar'
+    // A nice gif viewer
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.1@aar') {
+        transitive = true;
+    }
+    // Scanning Scanny Scanbot
+    compile "io.scanbot:sdk-package-1:1.9.3"
+}

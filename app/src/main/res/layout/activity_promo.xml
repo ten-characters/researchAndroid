@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.ten_characters.researchAndroid.activities.PromoActivity"
+    style="@style/AppTheme.Activity">
+
+    <!-- Just a container so we can get them smack in the middle-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/promo_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/promo_text"
+            android:textStyle="bold"
+            style="@style/highHeaderText"/>
+        <TextView
+            android:id="@+id/promo_code_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/promo_code_header"
+            android:textStyle="bold"
+            style="@style/lowHeaderText"/>
+
+        <LinearLayout
+            android:id="@+id/button_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/promo_sms_button"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_margin="4dp"
+                android:src="@mipmap/ic_sms"
+                style="@style/circleButton"
+                android:onClick="onButtonClick"/>
+            <ImageButton
+                android:id="@+id/promo_email_button"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_margin="4dp"
+                android:src="@mipmap/ic_email"
+                style="@style/circleButton"
+                android:onClick="onButtonClick"/>
+            <ImageButton
+                android:id="@+id/promo_share_button"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_margin="4dp"
+                android:src="@mipmap/ic_share"
+                style="@style/circleButton"
+                android:onClick="onButtonClick"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

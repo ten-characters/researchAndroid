@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="light_grey">#9e9e9e</color>
+    <color name="black_alpha_20">#38000000</color>
+    <color name="accent_dark_purple">#290029</color>
+    <color name="accent_dark_indigo">#2E0854</color>
+    <color name="accent_light_purple">#7F667F</color>
+    <color name="bright_purple">#aa00ff</color>
+    <color name="money_green">#ff007d2e</color>
+    <color name="material_red_deep">#ffc50606</color>
+
+    <color name="main_text_color">@color/accent_dark_purple</color>
+
+    <!-- Intro colors -->
+    <color name="intro_green">#1fc43a</color>
+    <color name="intro_purple">#ff290442</color>
+    <color name="intro_blue">#ff2c62c4</color>
+
+    <color name="intro_apply_button">#ffffff</color>
+
+    <array name="intro_colors">
+        <item>@color/black</item>
+        <item>@color/money_green</item>
+        <item>@color/intro_purple</item>
+        <item>@color/material_red_deep</item>
+        <item>@color/intro_blue</item>
+    </array>
+</resources>

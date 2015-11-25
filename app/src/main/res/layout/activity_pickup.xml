@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ten_characters.researchAndroid.activities.PickupActivity"
+    android:weightSum="1"
+    style="@style/AppTheme.Activity">
+
+    <net.doo.snap.camera.ScanbotCameraView
+        android:id="@+id/scan_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".85"
+        android:padding="16dp">
+
+        <net.doo.snap.ui.PolygonView
+            android:id="@+id/polygonView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:polygonStrokeWidth="2dp"
+            app:polygonStrokeColor="#ffffff"
+            app:polygonFillColor="@color/transparent"/>
+    </net.doo.snap.camera.ScanbotCameraView>
+
+    <Button
+        android:id="@+id/take_photo_button"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight=".15"
+        android:text="@string/take_photo"
+        android:onClick="onButtonClick"
+        style="@style/AppTheme.Widget.Button"
+        android:layout_gravity="bottom"
+        />
+
+</LinearLayout>

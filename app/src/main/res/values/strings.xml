@@ -1,0 +1,216 @@
+<resources>
+    <string name="app_name"  translatable="false">pallet</string>
+    <string name="app_version" translatable="false">1.0</string>
+    <string name="website_text" translatable="false">truckpallet.com</string>
+    <string name="web_register_link" translatable="false">http://truckpallet.com/register</string>
+
+    <!-- Services -->
+    <string name="tracking_service" translatable="false">Pallet Tracking</string>
+    <string name="unaccepted_pull_service" translatable="false">Pallet Unaccepted Shipments</string>
+    <string name="back_from_nav_service" translatable="false">Back from Nav</string>
+    <!-- Activities -->
+    <string name="title_activity_about">About</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_offer_shipment" translatable="false">Shipment Offer</string>
+    <string name="title_activity_account_auth" translatable="false">Authenticate</string>
+    <string name="title_activity_splash" translatable="false">Pallet</string>
+    <string name="title_activity_pickup" translatable="false">Pickup</string>
+    <string name="title_activity_profile" translatable="false">Profile</string>
+    <string name="title_activity_sign_document" translatable="false">Sign the Bill of Lading</string>
+    <string name="title_activity_upload_payment" translatable="false">Upload Payment Info</string>
+    <string name="title_activity_report_alert" translatable="false">Report Alert</string>
+    <string name="title_activity_image_view" translatable="false">Image View</string>
+    <string name="title_activity_shipment_view" translatable="false">Shipment</string>
+    <string name="title_activity_past_shipments" translatable="false">Past Shipments</string>
+    <string name="title_activity_rating" translatable="false">Rating</string>
+    <string name="title_activity_promo" translatable="false">Promos</string>
+
+    <!-- Global Font Path -->
+    <string name="pallet_font" translatable="false">fonts/PalletFont.ttf</string>
+
+    <!-- Intro Banner Activity -->
+    <string-array name="intro_drawables" translatable="false">
+        <item>@drawable/logo_text_white_transparent</item>
+        <item>@drawable/gif_offer</item>
+        <item>@drawable/gif_paid_quickly</item>
+        <item>@drawable/gif_documents</item>
+        <item>@drawable/intro_promo</item>
+        <item>@drawable/gif_navigation</item>
+        <item>@drawable/gif_rating</item>
+        <item>@drawable/logo_text_white_transparent</item>
+    </string-array>
+
+    <string-array name="intro_headers" translatable="false">
+        <item>Truckers,\nyour app has arrived.</item>
+        <item>No bidding. No brokers.</item>
+        <item>Paid fast.</item>
+        <item>No more paperwork.</item>
+        <item>Refer a Trucker.</item>
+        <item>Built in navigation.</item>
+        <item>Rate everybody.</item>
+        <item>Are you ready to change the way you find freight?
+            \n\n
+            Live freight coming soon.</item>
+    </string-array>
+
+    <string-array name="intro_bodies" translatable="false">
+        <item>Pallet efficient matches freight to available truck drivers already on their route.</item>
+        <item>Load boards are gone. We match you directly to freight that\'s right for you.
+            It\s yours as soon as you accept.</item>
+        <item>Free to use and we get you the best price. Plus, you get paid in just a few days,
+            no faxing or mailing required.</item>
+        <item>Pallet transfers all your documents electronically. We do electronic signatures too!</item>
+        <item>Sign up a friend with your code and get wired $25 after they complete their first move.
+            It\'s that easy!</item>
+        <item>After accepting an offer, Pallet immediately navigates you to your pickup location.</item>
+        <item>After your move, rate how fast locations got you loaded and unloaded.</item>
+        <item></item>
+    </string-array>
+
+    <string name="sign_up">Sign up</string>
+    <string name="contact_us">Contact us</string>
+
+    <!-- Main Activity -->
+    <string name="off_duty" translatable="false">Off Duty</string>
+    <string name="on_duty" translatable="false">On Duty</string>
+    <string name="pickup" translatable="false">Pickup</string>
+    <string name="dropoff" translatable="false">Dropoff</string>
+    <string name="pallet_button_description" translatable="false">Pallet\'s Main Button</string>
+    <string name="fright_map_tab" translatable="false">Freight Map</string>
+    <string name="freight_list_tab" translatable="false">Freight List</string>
+    <string name="shipment_resources_tab" translatable="false">Shipment Resources</string>
+
+    <!-- Drawer Items -->
+    <string name="view_profile" translatable="false">View Profile</string>
+    <string name="edit_profile" translatable="false">Edit Profile</string>
+    <string name="profile">Profile</string>
+    <string name="favorites" translatable="false">Favorites</string>
+    <!--<string name="current_shipments" translatable="false">Current Shipment</string>-->
+    <string name="past_shipments" translatable="false">Past Shipments</string>
+    <string name="logout" translatable="false">Logout</string>
+    <string name="payment">Get Paid</string>
+    <string name="promos">Promos!</string>
+    <string name="about">@string/title_activity_about</string>
+    <string name="help">Help</string>
+
+    <string-array name="main_drawer_items">
+        <!--<item>@string/promos</item>-->
+        <item>@string/payment</item>
+        <item>@string/favorites</item>
+        <!--<item>@string/current_shipments</item>-->
+        <item>@string/past_shipments</item>
+        <item>@string/title_activity_about</item>
+        <item>@string/promos</item>
+        <!--<item>@string/help</item>-->
+        <item>@string/logout</item>
+    </string-array>
+
+    <string-array name="main_drawer_icons" translatable="false">
+        <item>@drawable/nav_payment_icon_small</item>
+        <item>@drawable/nav_fav_icon_small</item>
+        <item>@drawable/nav_past_icon_small</item>
+        <item>@drawable/nav_info_icon_small</item>
+        <item>@drawable/nav_promo_icon_small</item>
+        <!--<item>@drawable/nav_help_icon_small</item>-->
+        <item>@drawable/nav_logout_icon_small</item>
+    </string-array>
+
+    <!-- Favorites Drawer -->
+    <string name="no_favorites_header" translatable="false">No favorites yet</string>
+    <string name="no_favorites_body" translatable="false">Look for and favorite freight on the map.</string>
+
+    <string name="drawer_open">Drawer is Open!</string>
+    <string name="drawer_close">Drawer is Closed!</string>
+
+    <!-- About Items -->
+    <string name="legal">Legal</string>
+
+    <string-array name="about_items">
+        <item>@string/legal</item>
+    </string-array>
+
+    <!-- Offer Activity -->
+    <string name="shipment" translatable="false">Shipment: </string>
+    <string name="offer_header">OFFER</string>
+    <string name="offer_accept">Accept</string>
+    <string name="offer_decline">Reject</string>
+    <string name="offer_favorite" translatable="false">Favorite</string>
+    <string name="offer_unfavorite" translatable="false">Unfavorite</string>
+    <string name="offer_countdown" translatable="false">Countdown</string>
+    <string name="price" translatable="false">Price: </string>
+    <string name="shipment_name" translatable="false">Name: </string>
+    <string name="commodity" translatable="false">Commodity: </string>
+    <string name="weight" translatable="false">Weight: </string>
+    <string name="size" translatable="false">Size: </string>
+    <string name="pickup_header" translatable="false">Pickup: </string>
+    <string name="dropoff_header" translatable="false">Dropoff: </string>
+
+    <string name="warehouses" translatable="false">Warehouses: </string>
+    <string name="pickup_rating" translatable="false">Pickup \nLocation \nRating: </string>
+    <string name="dropoff_rating" translatable="false">Dropoff \nLocation \nRating: </string>
+
+    <!-- Upload Payment Activity -->
+    <string name="payment_header" translatable="false">Bank Info</string>
+    <string name="routing_number" translatable="false">Routing Number</string>
+    <string name="account_number" translatable="false">Account Number</string>
+    <string name="read_tos" translatable="false">Have Read Terms of Service</string>
+    <string name="payment_tos" translatable="false">Pallet uses Braintree, a division of PayPal, Inc. (Braintree)
+        for payment processing services. By using the Braintree payment processing services you
+        agree to the Braintree Payment Services Agreement, and the applicable bank
+        agreement.</string>
+    <string name="payment_tos_service_text" translatable="false">Services Agreement</string>
+    <string name="payment_tos_service_link" translatable="false">https://www.braintreepayments.com/legal/gateway-agreement</string>
+    <string name="payment_tos_bank_text" translatable="false">Bank Agreement</string>
+    <string name="payment_tos_bank_link" translatable="false">https://www.braintreepayments.com/legal/cea-wells</string>
+    <string name="payment_submit" translatable="false">Get Paid</string>
+
+    <!-- Unaccepted Info Window! -->
+    <string name="unaccepted_show_more" translatable="false">See the Shipment!</string>
+
+    <!-- Navigate back Button -->
+    <string name="nav_back_key" translatable="false">Navigate Back</string>
+
+    <!-- Report Alert Activity -->
+    <string name="issue_title" translatable="false">Report an Issue</string>
+    <string name="can_deliver_prompt" translatable="false">Can you still deliver today?</string>
+    <string name="yes" translatable="false">Yes </string>
+    <string name="no" translatable="false">No </string>
+    <string name="estimated_delay_prompt" translatable="false">Estimated delay (hours): </string>
+    <string name="alert_message" translatable="false">Alert Message</string>
+    <string name="cancel" translatable="false">Cancel</string>
+
+    <!-- Profile Activity -->
+    <string name="edit_profile_picture" translatable="false">Edit Profile Picture</string>
+    <string name="rating" translatable="false">Rating: </string>
+    <string name="num_moves" translatable="false">Number of moves: </string>
+    <string name="profit" translatable="false">Money made: </string>
+    <string name="equipment_header" translatable="false">Equipment:</string>
+
+    <!-- Rating Activity -->
+    <string name="rating_header" translatable="false">Rate them!</string>
+    <string name="pickup_loc" translatable="false">Pickup \nLocation</string>
+    <string name="dropoff_loc" translatable="false">Dropoff \nLocation</string>
+
+    <!-- Shipment View Activity -->
+    <string name="reference_numbers_header" translatable="false">Reference Numbers:</string>
+    <string name="info_header" translatable="false">Info:</string>
+    <string name="view_bol_button" translatable="false">View Bill of Lading</string>
+
+    <string name="no_search_results" translatable="false">None found!</string>
+
+    <!-- Promos -->
+    <string name="promo_text" translatable="false">
+        Introduce Pallet to your fellow truckers! We will
+        send you $25 for everyone who signs up with your code and
+        completes a shipment!  It\'s easy!
+    </string>
+    <string name="promo_code_header" translatable="false">Your code is:</string>
+    <string name="promo_subject" translatable="false">Get more freight with Pallet</string>
+    <string name="promo_body" translatable="false">Try Pallet, the new way to get freight. And money. Both freight and money. Awesome.</string>
+    <string name="title_activity_shipment_resources" translatable="false">ShipmentResourcesActivity</string>
+
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="title_activity_intro_banner" translatable="false">IntroBannerActivity</string>
+
+
+</resources>

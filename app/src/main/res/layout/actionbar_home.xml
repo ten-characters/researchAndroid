@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/actionbar_height"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:background="@color/accent_dark_indigo">
+
+    <TextView
+        android:id="@+id/actionbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:text="@string/app_name"
+        fontPath="@string/pallet_font"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="false"/>
+
+    <ImageButton
+        android:id="@+id/action_bar_button"
+        android:contentDescription="@string/pallet_button_description"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/accent_dark_indigo"
+        android:src="@drawable/logo_white_transparent"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/offer_decision_button_panel"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="4dp"
+    android:weightSum="1" >
+    <Button
+        android:id="@+id/offer_decline_button"
+        android:text="@string/offer_decline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        style="@style/roundedButton"
+        android:clickable="true"
+        android:onClick="onButtonClick"/>
+    <Button
+        android:id="@+id/offer_accept_button"
+        android:text="@string/offer_accept"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        style="@style/roundedButton"
+        android:clickable="true"
+        android:onClick="onButtonClick"/>
+</LinearLayout>

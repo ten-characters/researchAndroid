@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
+    <string name="format_price">$<xliff:g id="price">%.2f</xliff:g></string>
+    <string name="format_address_city_state"><xliff:g id="city">%1$s</xliff:g>, <xliff:g id="state">%2$s</xliff:g></string>
+    <string name="format_date_am_pm"><xliff:g id="date">%1$s</xliff:g>, <xliff:g id="am_pm">%2$s</xliff:g></string>
+</resources>
